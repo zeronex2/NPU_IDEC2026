@@ -1,0 +1,67 @@
+OpenROAD 26Q3-1510-g6cb3f2b704 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING STA-1212] ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz line 9184, timing group from output port.
+[WARNING STA-1212] ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz line 9217, timing group from output port.
+[WARNING STA-1212] ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz line 9250, timing group from output port.
+[WARNING STA-1212] ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz line 9283, timing group from output port.
+[WARNING STA-1212] ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz line 9316, timing group from output port.
+[WARNING STA-1212] ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz line 9349, timing group from output port.
+[WARNING STA-1212] ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz line 9382, timing group from output port.
+[WARNING STA-1212] ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz line 10518, timing group from output port.
+[WARNING STA-1212] ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz line 10551, timing group from output port.
+[WARNING STA-1212] ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz line 10584, timing group from output port.
+[INFO ODB-0227] LEF file: ./platforms/asap7/lef/asap7_tech_1x_201209.lef, created 30 layers, 9 vias
+[INFO ODB-0227] LEF file: ./platforms/asap7/lef/asap7sc7p5t_28_R_1x_220121a.lef, created 212 library cells
+########## BASE ##########
+worst slack max -800.60
+tns max -387550.41
+===== conv1_layer =====
+max_delay/setup group clk
+
+                                     Required  Actual
+Endpoint                               Delay   Delay   Slack
+------------------------------------------------------------
+conv1_layer.conv1_calc.conv_out_1[11]$_DFFE_PP_/D (DFFHQNx1_ASAP7_75t_R)  384.80 1145.76 -760.96 (VIOLATED)
+
+===== maxpool_relu_1 =====
+max_delay/setup group clk
+
+                                     Required  Actual
+Endpoint                               Delay   Delay   Slack
+------------------------------------------------------------
+maxpool_relu_1.buffer3[5][1]$_DFFE_PP_/D (DFFHQNx1_ASAP7_75t_R)  384.91  514.06 -129.15 (VIOLATED)
+
+===== conv2_layer =====
+max_delay/setup group clk
+
+                                     Required  Actual
+Endpoint                               Delay   Delay   Slack
+------------------------------------------------------------
+conv2_layer.conv2_calc_1.p3[18]$_DFFE_PP_/D (DFFHQNx1_ASAP7_75t_R)  388.86 1182.53 -793.67 (VIOLATED)
+
+===== maxpool_relu_2 =====
+max_delay/setup group clk
+
+                                     Required  Actual
+Endpoint                               Delay   Delay   Slack
+------------------------------------------------------------
+maxpool_relu_2.buffer1[1][1]$_DFFE_PP_/D (DFFHQNx1_ASAP7_75t_R)  384.91  444.36  -59.46 (VIOLATED)
+
+===== fully_connected =====
+max_delay/setup group clk
+
+                                     Required  Actual
+Endpoint                               Delay   Delay   Slack
+------------------------------------------------------------
+fully_connected.buffer[35][12]$_DFFE_PP_/D (DFFHQNx1_ASAP7_75t_R)  392.31  295.02   97.28 (MET)
+
+===== comparator =====
+max_delay/setup group clk
+
+                                     Required  Actual
+Endpoint                               Delay   Delay   Slack
+------------------------------------------------------------
+comparator.buffer[9][11]$_DFFE_PP_/D (DFFHQNx1_ASAP7_75t_R)  386.42 1187.02 -800.60 (VIOLATED)
+
