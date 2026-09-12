@@ -16,6 +16,21 @@ Fully-connected 및 CSA Based MAC 연산 간소화를 주제로 한 프로젝트
   - RCA -> Wallace 3:2 CSA + Kogge-Stone
 - Pipelining
 
+## 구현 과정(11단계)
+각 단계별 PPA 변화는 report 참조
+
+1. Baseline
+2. Weight 상수화(localparam)
+3. FC one-hot Code
+4. conv1 출력 FF Pipelining
+5. conv2 3단 곱 Pipelining
+6. FC data_out FF Pipelining
+7. conv2 CSA+KS(Kogge-Stone)
+8. conv1 CSA+KS(Kogge-Stone)
+9. FC wsel_r FF Pipelining
+10. conv2 MID07 Pipelining
+11. FC 48 -> 12 Pipelining
+
 ## Development Environment
 
 - Verilog HDL
