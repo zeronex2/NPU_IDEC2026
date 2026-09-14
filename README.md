@@ -17,7 +17,9 @@ Fully-connected 및 CSA Based MAC 연산 간소화를 주제로 한 프로젝트
 - Pipelining
 
 ## 구현 과정(11단계)
-각 단계별 PPA 변화는 report 참조
+- Claude, Cursor AI 활용한 RTL 구현
+- Cursor Agent Mode 활용한 Synthesis 및 Report 파일 생성 자동화
+- 각 단계별 PPA 변화는 report 참조
 
 1. Baseline
 2. Weight 상수화(localparam)
